@@ -1,4 +1,4 @@
-import { Get_Productos, Buscar_Productos, Filtrar_Productos, Calcular_Total_Carrito, Add_Producto, Buscar_Productos_id } from "../services/productos.service.js";
+import { Get_Productos, Buscar_Productos, Filtrar_Productos, Calcular_Total_Carrito, Add_Producto, Buscar_Productos_id, Buscar_Productos_Categoria } from "../services/productos.service.js";
 
 export const listar_productos = (req,res) => {
     const consulta = Get_Productos();
@@ -37,7 +37,10 @@ export const registrar_producto = (req, res) => {
 
     const nuevo = Add_Producto({ nombre, precio, stock, categoria, marca });
 
-    res.status(201).json(nuevo);
+    res.status(201).json({
+        mensaje: "Producto registrado exitosamente",
+        data: nuevo
+    });
 };
 
 
@@ -53,6 +56,18 @@ export const buscar_producto_por_id = (req, res) => {
     if (!consulta) {
         return res.status(404).json({ mensaje: "Producto no encontrado" });
     }
+
+    res.status(200).json(consulta);
+};
+
+export const buscar_productos_por_categoria = (req, res) => {
+    const { categoria } = req.params;
+
+    if (!categoria || categoria.trim() == "") {
+        return res.status(400).json({ mensaje: "parametros incorrectos" });
+    }
+
+    const consulta = Buscar_Productos_Categoria(categoria);
 
     res.status(200).json(consulta);
 };

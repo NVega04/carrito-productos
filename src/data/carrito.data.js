@@ -14,7 +14,7 @@ export const bd_carrito = [
                 nombre: "Celular Samsung",
                 precio: 1800000,
                 stock: 15,
-                categoria: "Tecnologia",
+                categoria: "Celulares",
                 marca: "Samsung"
             },
             {
@@ -30,7 +30,7 @@ export const bd_carrito = [
                 nombre: "Monitor Dell",
                 precio: 1200000,
                 stock: 12,
-                categoria: "Tecnologia",
+                categoria: "Estudio",
                 marca: "Dell"
             },
             {
@@ -38,7 +38,7 @@ export const bd_carrito = [
                 nombre: "Teclado Logitech",
                 precio: 250000,
                 stock: 30,
-                categoria: "Tecnologia",
+                categoria: "Estudio",
                 marca: "Logitech"
             },
             {
@@ -46,7 +46,7 @@ export const bd_carrito = [
                 nombre: "Mouse Logitech",
                 precio: 180000,
                 stock: 25,
-                categoria: "Tecnologia",
+                categoria: "Estudio",
                 marca: "Logitech"
             },
             {
@@ -78,7 +78,7 @@ export const bd_carrito = [
                 nombre: "Memoria USB 64GB",
                 precio: 80000,
                 stock: 50,
-                categoria: "Tecnologia",
+                categoria: "PC",
                 marca: "Kingston"
             },
             {
@@ -86,7 +86,7 @@ export const bd_carrito = [
                 nombre: "Impresora HP",
                 precio: 950000,
                 stock: 7,
-                categoria: "Tecnologia",
+                categoria: "PC",
                 marca: "HP"
             },
             {

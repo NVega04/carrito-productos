@@ -23,6 +23,10 @@ export const Filtrar_Productos = (p_precio, p_condicion1) => {
         return mitbl.filter(x => x.precio < p_precio);
 }
 
+export const Buscar_Productos_Categoria = (p_categoria) => {
+    return mitbl.filter(x => x.categoria.toUpperCase() == p_categoria.toUpperCase());
+};
+
 export const Add_Producto = (producto) => {
     const newId = mitbl.length > 0 ? Math.max(...mitbl.map(p => p.id)) + 1 : 1;
     const nuevo = { id: newId, ...producto };
