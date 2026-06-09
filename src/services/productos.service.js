@@ -23,6 +23,13 @@ export const Filtrar_Productos = (p_precio, p_condicion1) => {
         return mitbl.filter(x => x.precio < p_precio);
 }
 
+export const Add_Producto = (producto) => {
+    const newId = mitbl.length > 0 ? Math.max(...mitbl.map(p => p.id)) + 1 : 1;
+    const nuevo = { id: newId, ...producto };
+    mitbl.push(nuevo);
+    return nuevo;
+};
+
 export const Calcular_Total_Carrito = (lProductos) => {
     let total = 0;
     for(const producto in lProductos)

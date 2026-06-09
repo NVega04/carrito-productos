@@ -4,14 +4,9 @@ const app = express();
 
 app.use(express.json());
 
-
 const PORT = 3000;
 
-
-app.use("/api/productos" , router);
-
-
-
+app.use("/" , router);  // retiro el prefijo de productos, para delimitar la necesidad de ruta
 
 app.listen(PORT, () => {
 
